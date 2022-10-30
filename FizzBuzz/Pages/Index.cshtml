@@ -1,0 +1,25 @@
+﻿@page
+@model FizzBuzz.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                FizzBuzz 🙂
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.FizzBuzzClassList) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Text)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
